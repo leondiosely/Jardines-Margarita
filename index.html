@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardines Margarita C.A.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <nav class="main-navbar">
+        <div class="logo">
+            <img src="Imagenes/logo.png" alt="Jardines Margarita C.A. Logo">
+        </div>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#Sobre Nosotros">Sobre Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="/login.html" class="iniciars" target="_blank">Iniciar sesión</a>
+    </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <h2>Plantas Ornamentales de Jardines Margarita C.A.</h2>
+            <p>Embellece tu hogar y jardín con nuestras exclusivas plantas ornamentales</p>
+            <a href="#second-section" class="cta-button">Comenzar</a>
+        </div>
+    </header> 
+
+    <main class="main-content" id="second-section">
+        <section class="intro">
+            <div class="intro-text">
+                <h2>Bienvenido a Jardines Margarita C.A</h2>
+                <p>En Jardines Margarita C.A., nos especializamos en ofrecer una amplia variedad de plantas ornamentales para embellecer tu hogar y jardín. Ya sea que busques plantas de interior, exterior, suculentas, cactus o árboles ornamentales, tenemos todo lo que necesitas para crear un espacio verde y armonioso.</p>
+                <a href="#third-section" class="cta-button">Explorar Plantas</a>
+            </div>
+            <div class="intro-image">
+                <img src="/Imagenes/jardin.jpg" alt="Plantas Ornamentales">
+            </div>
+        </section>
+    </main>
+        </section>
+        <section>
+            <div class="main-wrapper">
+                <aside class="secondary-navbar">
+                    <h2>Listado</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#arbol-fortuna">Árbol de la Fortuna</a></li>
+                            <li><a href="#calathea">Calathea</a></li>
+                            <li><a href="#calendula-azteca">Caléndula Azteca</a></li>
+                            <li><a href="#capa-roja">Capa Roja</a></li>
+                            <li><a href="#cipres">Ciprés</a></li>
+                            <li><a href="#coco-plumoso">Coco Plumoso</a></li>
+                            <li><a href="#corona-cristo">Corona de Cristo</a></li>
+                            <li><a href="#fittonia">Fittonia</a></li>
+                            <li><a href="#flor-navidad">Flor de Navidad</a></li>
+                            <li><a href="#flor-desierto">Flor del Desierto</a></li>
+                            <li><a href="#jazmin-azul">Jazmín Azul</a></li>
+                            <li><a href="#laurel-rosa">Laurel Rosa</a></li>
+                            <li><a href="#lengua-suegra">Lengua de Suegra</a></li>
+                            <li><a href="#mandevilla">Mandevilla</a></li>
+                            <li><a href="#mangle-plateado">Mangle Plateado</a></li>
+                            <li><a href="#pino-playero">Pino Playero</a></li>
+                            <li><a href="#rosa">Rosa</a></li>                            
+                            <li><a href="#siempreviva">Siempreviva</a></li>
+                            <li><a href="#trinitaria">Trinitaria</a></li>
+                            <li><a href="#vinca">Vinca</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <main>
+                    <aside class="third-navbar" id="third-section">
+                        <h2>CATÁLOGO</h2> 
+                        <h4>En nuestro diverso catálogo, puedes hallar plantas como:</h4>
+                        <div class="carousel">
+                            <div class="slides">
+                                <img src="/Imagenes/1.jpg" alt="Caléndula Azteca">
+                                <img src="/Imagenes/2.jpg" alt="Siempreviva">
+                                <img src="/Imagenes/3.jpg" alt="Vincas">
+                                <img src="/Imagenes/4.jpg" alt="Fittonia">
+                                <img src="/Imagenes/5.jpg" alt="Flor de Navidad">
+                                <img src="/Imagenes/6.jpg" alt="Rosas">
+                            </div>
+                            <div class="arrow left">&#10094;</div>
+                            <div class="arrow right">&#10095;</div>
+                        </div>
+                        <script>
+                            const slides = document.querySelector('.slides');
+                            const leftArrow = document.querySelector('.arrow.left');
+                            const rightArrow = document.querySelector('.arrow.right');
+                            let index = 0;
+                    
+                            function showSlide(i) {
+                                index += i;
+                                if (index < 0) index = slides.children.length - 1;
+                                if (index >= slides.children.length) index = 0;
+                                slides.style.transform = `translateX(${-index * 100}%)`;
+                            }
+                    
+                            leftArrow.addEventListener('click', () => showSlide(-1));
+                            rightArrow.addEventListener('click', () => showSlide(1));
+                        </script>
+                    </aside>
+                </main>
+                <aside class="quarter-navbar">
+                    <h2>Preguntas Frecuentes</h2>
+                        <div id="circle1" class="circle" onclick="toggleLike(this)">
+                            <div class="text">
+                                <div class="front"><strong>¿Qué tipo de luz necesitan nuestras plantas?</strong></div>
+                                <div class="back">Luz indirecta brillante.</div>
+                            </div>
+                        </div>
+                    
+                        <div id="circle2" class="circle" onclick="toggleLike(this)">
+                            <div class="text">
+                                <div class="front"><strong>¿Con qué frecuencia se deben regar?</strong></div>
+                                <div class="back">Moderadamente.</div>
+                            </div>
+                        </div>
+                        <div id="circle3" class="circle" onclick="toggleLike(this)">
+                            <div class="text">
+                                <div class="front"><strong>¿Qué tipo de suelo es ideal?</strong></div>
+                                <div class="back">Bien drenado y rico en nutrientes.</div>
+                            </div>
+                        </div>
+                        <div id="circle4" class="circle" onclick="toggleLike(this)">
+                            <div class="text">
+                                <div class="front"><strong>¿Cómo mejorar la floración?</strong></div>
+                                <div class="back">Fertilizantes y poda regular.</div>
+                            </div>
+                        </div>
+                        <div id="circle5" class="circle" onclick="toggleLike(this)">
+                            <div class="text">
+                                <div class="front"><strong>¿Cómo protegerlas de plagas?</strong></div>
+                                <div class="back">Inspección regular y insecticidas naturales.</div>
+                            </div>
+                        </div>
+                        <div id="circle6" class="circle" onclick="toggleLike(this)">
+                            <div class="text">
+                                <div class="front"><strong>¿Cómo propagar estas plantas?</strong></div>
+                                <div class="back">Esquejes o división de raíces.</div>
+                            </div>
+                        </div>
+                        <div id="circle7" class="circle" onclick="toggleLike(this)">
+                            <div class="text">
+                                <div class="front"><strong>¿Qué plantas requieren menos mantenimiento?</strong></div>
+                                <div class="back">Siempreviva y Mangle Plateado.</div>
+                            </div>
+                        </div>
+    
+                        <script>
+                            function toggleLike(element) {
+    element.classList.toggle('liked');
+}
+                        </script>
+                    </div>
+                </aside>
+            </div>
+        </section>                
+        </div> 
+    </main>
+    <section id="arbol-fortuna" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Árbol de la Fortuna</h2>
+            <p>También conocido por su nombre científico: Portulacaria Afra u otros nombres como: Árbol de la abundancia, Planta de Jade. Es una planta arbustiva originaria del sur de África.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Es un arbusto que puede alcanzar hasta 6 metros de altura.</li>
+                        <li>Tiene hojas carnosas y brillantes, con forma redondeada y de dos en dos enfrentadas en cada rama.</li>
+                        <li>Es una planta adaptable a diferentes condiciones de luz, pero prefiere lugares con luz indirecta y sin corrientes de aire.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/arbolfortuna.jpg" alt="Árbol de la Fortuna">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Es una especie de planta indicada para zonas cálidas porque no aguanta bien las bajas temperaturas.</li>
+                        <li>Se debe mantener en una atmósfera seca y donde haya mucha luz. Sin embargo, no es conveniente que reciba rayos de sol directamente. </li>
+                        <li>Lo más recomendable es realizar un riego abundante cada 15 días o un riego moderado una vez a la semana. Dependiendo de que tan árida sea la zona en la cuál se encuentre.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+
+    <section id="calathea" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Calathea</h2>
+            <p>Es una especie de planta ornamental tropical perteneciente a la familia Marantaceae. Es originaria de los bosques tropicales y subtropicales de Centroamérica y Sudamérica, particularmente en Brasil, Venezuela y México.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Tiene hojas grandes y decorativas, con patrones de rayas, estampados o colores brillantes.</li>
+                        <li>Las hojas pueden ser ovaladas, lanceoladas o estrechas.</li>
+                        <li>No tiene un tallo definido, ya que las hojas emergen directamente de la base de la planta.</li>
+                        <li>Son plantas herbáceas, rizomatosas, que si son cultivadas no rebasan los 50-60 cm.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/calathea.jpg" alt="Calathea">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Requiere luz moderada, pero no directa. Es recomendable colocarla en un lugar con luz indirecta y no directa al sol.</li>
+                        <li>Es preferible mantenerla en interiores. </li>
+                        <li>Al ser una planta selvática, necesita un ambiente húmedo, pero no encharcado.</li>
+                        <li>Son muy sensibles tanto al exceso como a la falta de agua, el riego dependerá de que tan húmedo y acondicionado sea el espacio en el cual se encuentre.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="calendula-azteca" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Caléndula Azteca</h2>
+            <p>También conocida como Tagetes erecta, Caléndula Mexicana, Caléndula Grande, Cempaxóchitl o Cempasúchil, es una planta con flores del género Tagetes. Originaria de México y Guatemala, esta planta tiene una rica historia cultural y es ampliamente utilizada en ceremonias y medicina tradicional.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Su altura oscila entre 20 y 90 cm.</li>
+                        <li>Se caracteriza por sus tallos densamente cubiertos de hojas de color verde oscuro y suaves.</li>
+                        <li>Sus flores son de color amarillo, naranja y marrón miel, con pétalos dentados y brillantes.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/calendula.jpg" alt="Caléndula Azteca">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Ubica la planta en un lugar soleado o parcialmente sombreado.</li>
+                        <li>Necesitan un riego regular pero moderado, evitando el exceso de agua que puede dañar las raíces.</li>
+                        <li>Se recomienda eliminar las flores marchitas para promover la formación de nuevas flores y mantener una buena salud de la planta.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="capa-roja" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Capa Roja</h2>
+            <p>Su nombre científico es: Megaskepasma erythrochlamys. Es un arbusto perenne perteneciente a la familia Acanthaceae, originario de regiones tropicales de Centroamérica y Sudamérica. También se conoce como Manto Rojo. Es un arbusto que solicita pocos cuidados para su óptimo crecimiento y floración. Esta planta es bastante resistente al clima tropical pero es muy susceptible a las bajas temperaturas de zonas templadas.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Puede llegar a alcanzar más de 3 metros de altura en tierra firme; en macetas se pueden obtener plantas de 2 metros o menos.</li>
+                        <li>La floración ocurre con la formación de inflorescencias racimosas (espigas) terminales en los tallos.</li>
+                        <li>Se forman inflorescencias racimosas que contienen brácteas alargadas de color rojo que rodean a las verdaderas flores.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/caparoja.jpg" alt="Capa Roja">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Requiere crecer a semisombra. En regiones subtropicales puede cultivarse a pleno sol.</li>
+                        <li>Nunca debe estar en lugares demasiado sombríos.</li>
+                        <li>Tolera casi cualquier tipo de tierra siempre que este no se encharque por tener mala permeabilidad.</li>
+                        <li>Se debe regar cuando la tierra comience a secarse; manteniéndola siempre húmeda pero evitando el exceso de agua.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="cipres" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Ciprés</h2>
+            <p>También conocido como Cupressus sempervirens o ciprés común, es una especie de árbol de hoja perenne perteneciente a la familia Cupressaceae. Es originario de Europa Oriental y Asia Occidental, aunque se cultiva ampliamente en todo el mundo.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Puede alcanzar hasta 30 metros de altura o más.</li>
+                        <li>Sus hojas son pequeñas, escamosas, de color verde oscuro, y se presentan en ramillas de 2 a 5 milímetros de longitud.</li>
+                        <li>Su tronco es resistente y puede ser amarillo o rojizo, con una textura apretada y resinosa.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/cipres.jpg" alt="Ciprés" class="imagen-ajustada">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Se deben plantar en un lugar con buen drenaje y donde reciban suficiente sol.</li>
+                        <li>No toleran bien el encharcamiento. Necesitan un riego regular para establecerse. Una vez que están bien establecidos, se vuelven bastante tolerantes a la sequía.</li>
+                        <li>Se recomienda realizar podas ligeras para mantener su forma y eliminar ramas muertas o dañadas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="coco-plumoso" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Coco Plumoso</h2>
+            <p>También conocido como Syagrus romanzoffiana, es una palmera ornamental de rápido crecimiento que se utiliza comúnmente en jardines, avenidas y parques por su belleza tropical y su capacidad para adaptarse a diferentes climas y suelos.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Alcanza una altura de hasta 15 metros.</li>
+                        <li>Su tronco es robusto y liso.</li>
+                        <li>Tiene hojas pinnadas, largas y arqueadas que pueden medir hasta 3 metros de longitud.</li>
+                        <li>Las hojas son de color verde brillante y dan un aspecto muy ornamental a la planta.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/cocoplumoso.jpg" alt="Coco Plumoso">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Prefiere lugares soleados, aunque puede tolerar algo de sombra. Es ideal para jardines tropicales o patios.</li>
+                        <li>Requiere riegos regulares, especialmente durante los meses más cálidos. Es importante no dejar que el suelo se seque completamente entre riegos, pero también evitar el encharcamiento.</li>
+                        <li>Prefiere climas cálidos y no tolera heladas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="corona-cristo" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Corona de Cristo</h2>
+            <p>Conocida científicamente como Euphorbia milii, es una planta suculenta que pertenece a la familia de las euforbias. Es una planta originaria de Madagascar que se ha ganado popularidad en todo el mundo debido a su belleza, atractivo visual y resistencia.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Puede alcanzar entre 30 cm y 1 metro de altura, dependiendo de las condiciones de crecimiento.</li>
+                        <li>Tiene hojas ovaladas y carnosas que pueden ser de color verde brillante.</li>
+                        <li>La planta produce brácteas coloridas que parecen flores, en tonos que van desde el rojo, rosa, amarillo y blanco.</li>
+                        <li>Presenta espinas afiladas en sus tallos, lo que le da un aspecto distintivo.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/coronacristo.jpg" alt="Corona de Cristo">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Prefiere lugares soleados y cálidos. Es ideal para jardines exteriores en climas cálidos o como planta de interior cerca de una ventana soleada.es muy tolerante a la sequía.</li>
+                        <li>Riega moderadamente, permitiendo que la tierra se seque completamente entre riegos.</li>
+                        <li>La poda no es estrictamente necesaria, pero puedes recortar las ramas muertas o dañadas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="fittonia" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Fittonia</h2>
+            <p>También conocida como Fitonia o Planta de Nervios, es una planta de interior de tipo rastrero que pertenece a la familia de las Gesneriaceae. Originaria de la región tropical y subtropical de América, se caracteriza por sus hojas verdes brillantes y vellosas con un patrón de venas distintivo.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Generalmente crece hasta unos 15-30 cm de altura y puede extenderse en forma de matas.</li>
+                        <li>Las hojas son pequeñas, ovaladas y tienen un patrón distintivo de venas que contrastan con el color del resto de la hoja.</li>
+                        <li>Las venas pueden ser blancas, rosadas o rojas, dependiendo de la variedad, sobre un fondo verde oscuro o verde claro. Produce flores pequeñas y poco llamativas,  no son el principal atractivo de la planta.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/fittonia.jpg" alt="Fittonia">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Prefiere luz indirecta brillante. Evita la luz solar directa, ya que puede quemar sus hojas. Un lugar ideal es cerca de una ventana con luz filtrada.</li>
+                        <li>Lo idea es mantener la tierra ligeramente húmeda, evitando que se seque completamente entre riegos.</li>
+                        <li>Prospera en ambientes húmedos. Si el aire en tu hogar es seco, considera usar un humidificador o colocar la maceta sobre un plato con piedras y agua.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="flor-navidad" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Flor de Navidad</h2>
+            <p>También conocida como poinsettia o euphorbia pulcherrima, es una planta popular durante la temporada navideña, famosa por sus brillantes brácteas rojas, aunque también puede encontrarse en otros colores como blanco, rosa y amarillo.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Puede alcanzar una altura de 30 cm a 1 metro, dependiendo de las condiciones de crecimiento.</li>
+                        <li>Las hojas son grandes, en forma de corazón y de un verde intenso. Las brácteas (hojas modificadas) que rodean las flores son las que dan el color característico a la planta.</li>
+                        <li>Las verdaderas flores son pequeñas y amarillas, situadas en el centro de las brácteas coloridas.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/flornavidad.jpg" alt="Flor de Navidad">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Prefiere luz brillante e indirecta. Evita la luz solar directa, ya que puede quemar las hojas. Un lugar cerca de una ventana es ideal.</li>
+                        <li>Mantener la tierra húmeda, más no empapada. Riega cuando la parte superior de la tierra esté seca al tacto.</li>
+                        <li>Se recomienda el riego por inmersión, es decir, sumergir la maceta en agua durante unos minutos para que la planta absorba la cantidad necesaria.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="flor-desierto" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Flor del Desierto</h2>
+            <p>Adenium Obesum, comúnmente conocida como rosa del desierto o flor del desierto, es una planta suculenta originaria de las regiones áridas de África y la península arábiga. Esta planta pertenece a la familia Apocynaceae, que incluye muchas otras especies ornamentales.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Es un arbusto de lento crecimiento, puede alcanzar alturas de hasta 3 metros.</li>
+                        <li>Las flores son muy llamativas, en forma de trompeta y de colores vibrantes, como rojo, rosa, blanco y anaranjado.</li>
+                        <li>Florecen en forma individual o en grupos de tres o más ejemplares.</li>
+                        <li>El tallo almacena agua, lo que le permite sobrevivir en condiciones de sequía. Las hojas también ayudan a retener humedad.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/flordesierto.jpg" alt="Flor del Desierto">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Necesita luz solar directa para prosperar. Lo mejor es que la coloques en un lugar donde reciba, al menos, 6 horas de sol al día. En interiores, debes situarla cerca de una ventana soleada.</li>
+                        <li>Es crucial que riegues tu planta de manera adecuada. Riega cuando la capa superior del suelo esté seca.</li>
+                        <li>Utiliza un suelo bien drenado, idealmente una mezcla para cactus y suculentas. Un buen drenaje es vital para la vida de las raíces.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="jazmin-azul" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Jazmín Azul</h2>
+            <p>Científicamente Asminum azoricum, también conocido como Jazmín del Cabo, Jazmín del Cielo, Celestinas o Jazmín Celeste, es un arbusto trepador muy apreciado en jardinería por su belleza, aromática fragancia y facilidad de cuidado.  Es nativo de las Islas Azores y otras regiones de clima cálido.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Puede crecer hasta 3-5 metros de altura, dependiendo de las condiciones de crecimiento y el soporte disponible. </li>
+                        <li>Las hojas son compuestas, generalmente de un verde brillante, con bordes lisos. Pueden tener entre 5 y 9 foliolos.</li>
+                        <li>Las flores son pequeñas, de color azul pálido o blanco, y tienen un aroma dulce y agradable.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/jazmin.jpg" alt="Jazmín Azul">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Prefiere un lugar soleado o parcialmente sombreado. Necesita al menos 6 horas de luz solar directa al día para florecer adecuadamente.</li>
+                        <li>Mantener la tierra húmeda, más no empapada. Riega cuando la parte superior de la tierra esté seca al tacto.</li>
+                        <li>Es recomendable podar la planta después de la floración para mantener su forma y promover un crecimiento más denso.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="laurel-rosa" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Laurel Rosa</h2>
+            <p>También conocida como Nerium oleander, y comúnmente como Adelfa, es una planta perteneciente a la familia Apocynaceae. Esta planta es nativa de la cuenca mediterránea y se distribuye principalmente en regiones mediterráneas, aunque también crece en el Sahara y en el este de Asia. </p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Puede alcanzar una altura de 2 a 6 metros, dependiendo de las condiciones de crecimiento y la poda.</li>
+                        <li>Las hojas son alargadas, estrechas y de color verde brillante. Son perennes y pueden ser opuestas o alternas en el tallo.</li>
+                        <li>Produce flores en racimos que pueden ser de diversos colores, incluyendo rosa, blanco, rojo y amarillo.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/laurelrosa.jpg" alt="Laurel Rosa">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Prefiere lugares soleados y cálidos. Puede tolerar algo de sombra, pero florece mejor con al menos 6 horas de luz solar directa al día.</li>
+                        <li>Es bastante resistente a la sequía una vez establecida, pero durante los períodos de crecimiento activo, se recomienda regar regularmente para mantener el suelo ligeramente húmedo.</li>
+                        <li>La poda es importante para mantener la forma de la planta y fomentar un crecimiento denso.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="lengua-suegra" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Lengua de Suegra</h2>
+            <p>Conocida científicamente como Sansevieria trifasciata, es una planta perenne originaria de África que pertenece a la familia Asparagaceae. Esta planta es muy popular debido a su facilidad de cuidado y resistencia, lo que la hace ideal para principiantes en jardinería.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Puede alcanzar entre 30 cm y 1 metro de altura, dependiendo de la variedad.</li>
+                        <li>Las hojas son largas, rígidas y en forma de espada, con bordes afilados. Suelen ser de color verde oscuro con bandas transversales más claras, aunque existen variedades con hojas amarillas o blancas.</li>
+                        <li>Es conocida por su capacidad para purificar el aire al absorber toxinas.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/lenguasuegra.jpg" alt="Lengua de Suegra">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Se adapta bien a diversas condiciones de luz. Prefiere luz indirecta brillante, pero también puede tolerar condiciones de poca luz. Evita la luz solar directa intensa, ya que puede quemar las hojas.</li>
+                        <li>Es muy resistente a la sequía. Riega la planta cuando la capa superior del suelo esté completamente seca. En general, se recomienda regar cada 2-6 semanas, dependiendo de la temperatura y la humedad del ambiente.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+
+    <section id="mandevilla" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Mandevilla</h2>
+            <p>Es una planta trepadora originaria de las junglas sudamericanas, especialmente de Brasil. Perteneciente a la familia Apocynaceae, su nombre científico es Dipladenia. Es conocida por sus flores vistosas y fragantes.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Las hojas son brillantes, de forma ovalada y de color verde oscuro. Son opuestas y pueden ser perennes en climas cálidos.</li>
+                        <li>Las flores son grandes, en forma de trompeta, y pueden ser de varios colores, incluyendo blanco, rosa, rojo y amarillo. Florecen durante la primavera y el verano, y su fragancia es muy agradable.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/mandevilla.jpg" alt="">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Prefiere un lugar soleado, aunque puede tolerar algo de sombra. Se recomienda una exposición a pleno sol durante al menos 6 horas al día para promover una floración abundante.</li>
+                        <li>Necesita un riego regular, especialmente durante la temporada de crecimiento. Mantener la tierra húmeda, más no empapada.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    
+    <section id="mangle-plateado" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Mangle plateado</h2>
+            <p>El conocarpus erectus, comúnmente conocido como mangle botón o mangle plateado, es una especie de planta leñosa perteneciente a la familia Combretaceae. Esta planta es resistente y se encuentra en las orillas de los mares y océanos en regiones tropicales y subtropicales de América y África occidental.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Las hojas son alternas, ovaladas y coriáceas, con un color verde claro en la parte superior y plateado en la parte inferior, lo que le da su nombre común. Tienen un borde entero y pueden medir entre 5 y 10 cm de longitud.</li>
+                        <li>Las flores son pequeñas, de color blanco o crema, y se agrupan en racimos. Florecen durante la temporada cálida.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/mangle.jpg" alt="Mangle Plateado">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Es una planta que se desarrolla en ambientes salinos y húmedos, por lo que se encuentra típicamente en áreas costeras. Es ideal para su cultivo en zonas costeras o en jardines acuáticos.</li>
+                        <li>Prefiere suelos salinos y anegados, típicos de los ecosistemas de manglares.</li>
+                        <li>Esta planta prospera en climas cálidos y húmedos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    
+    <section id="pino-playero" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Pino Playero</h2>
+            <p>Conocido cientificamente como Pinus contorta, o por otros nombres como:  pino de costa o pino de los arenales. Es una especie de pino que se encuentra comúnmente en las regiones costeras de América del Norte, especialmente en la costa del Pacífico.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Las hojas son aciculares (en forma de aguja), de color verde oscuro y crecen en grupos de dos.</li>
+                        <li>Produce conos que son alargados, de color marrón y se abren para liberar las semillas en condiciones adecuadas.</li>
+                        <li>La corteza es gruesa y escamosa, de color marrón claro a grisáceo, que ayuda a proteger el árbol de incendios y plagas.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/pinoplayero.jpg" alt="Pino Playero">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Prefiere estar expuesto a pleno sol, por lo que es ideal plantarlo en áreas donde reciba luz solar directa durante la mayor parte del día.</li>
+                        <li>Una vez establecido, el pino playero es bastante resistente a la sequía y no requiere riegos frecuentes. Durante sus primeros años después de la siembra, es importante mantener el suelo húmedo para ayudar al establecimiento del árbol.</li>
+                        <li>No es necesaria la poda.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    
+    <section id="rosa" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Rosa</h2>
+            <p>Las rosas son una de las flores más populares y apreciadas en jardinería. Es conocida por su belleza y fragancia, y se cultiva ampliamente por estas características. Hay más de 100 especies de rosas, la mayoría originarias de Asia, aunque también hay algunas nativas de Europa, Norteamérica y África noroccidental.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Las hojas son compuestas, generalmente con 5 a 7 foliolos, y pueden ser de color verde brillante o mate, dependiendo de la variedad.</li>
+                        <li>Las flores pueden variar en tamaño, forma y color (rojo, rosa, blanco, amarillo, naranja, entre otros).</li>
+                        <li>La mayoría de las variedades de rosas tienen espinas en sus tallos, lo que les da una característica distintiva.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/rosa.jpg" alt="Rosas">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Requieren pleno sol para florecer adecuadamente. Se recomienda plantarlas en un lugar donde reciban al menos 6 horas de luz solar directa al día.</li>
+                        <li>Es importante mantener el suelo húmedo pero no encharcado. Se recomienda regar profundamente una o dos veces por semana, dependiendo del clima y la estación.</li>
+                        <li>La poda es fundamental para mantener la forma y salud de la planta.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    
+    <section id="Siempreviva" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Siempreviva</h2>
+            <p>También conocida científicamente como Sempervivum, es una planta crasa muy resistente y hermosa que se cultiva tanto en interiores como en exteriores. Esta planta, es popular en jardinería, debido a que puede crecer en entornos rocosos y secos, es apreciada por su belleza ornamental.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Existen numerosas especies de siemprevivas, siendo algunas de las más comunes Sedum spectabile, Sedum acre, y Sedum rubrotinctum.</li>
+                        <li>Estas pueden variar en tamaño, forma y color. Las hojas son carnosas, generalmente de forma ovalada o en forma de aguja.</li>
+                        <li>Producen flores pequeñas que pueden ser de diferentes colores.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/siempreviva.jpg" alt="Siempreviva">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Prefieren lugares soleados y cálidos. Se recomienda plantarlas en un lugar donde reciban al menos 6 horas de sol al día.</li>
+                        <li>Es muy tolerante a la sequía. Se debe regar moderadamente; es mejor dejar que la tierra se seque completamente entre riegos.</li>
+                        <li>El exceso de humedad puede causar pudrición de raíces o enfermedades fúngicas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+    <section id="trinitaria" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Trinitaria</h2>
+            <p>La trinitaria, también llamada: bugambilia (bougainvillea), veranera o buganvilla; es un género de la familia Nyctaginaceae. Es nativo de los bosques tropicales húmedos de América del Sur, principalmente de los situados en áreas de Brasil, Perú, Paraguay, Bolivia, el norte de Argentina y Venezuela; y ampliamente cultivado en regiones tropicales y subtropicales.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Es un arbusto trepador, perennifolio y espinoso, que puede alcanzar hasta 12 metros de altura.</li>
+                        <li>Crece en cualquier terreno.</li>
+                        <li>Tiene hojas ovaladas y alternas, de 4 a 13 cm de largo y 2 a 6 cm de ancho.</li>
+                        <li>Las flores son pequeñas, rodeadas por grandes brácteas coloridas de diferentes tonos, como blanco, amarillo, rosa, magenta, púrpura y rojo.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/trinitaria.jpg" alt="Trinitaria">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Necesita una gran cantidad de luz natural para crece.</li>
+                        <li>Aunque la no es una planta exigente, lo ideal es buscar un suelo con un buen drenaje para evitar encharcamientos ocasionales.</li>
+                        <li>No necesita de mucha agua, basta con regarla una vez por semana cuando esta se encuentra en un jardín, o cada 3 o 4 días si está en maceta.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+
+    <section id="vinca" class="plant-section">
+        <div class="main-wrapper">
+            <h2>Vinca</h2>
+            <p>Es un género de plantas perteneciente a la familia Apocynaceae. Coloquialmente conocida como putica o coqueta. Es una planta perenne popular en jardinería, apreciada por su resistencia y sus atractivas flores.</p>
+            <div class="content-wrapper">
+                <div class="left-section">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>Las hojas son opuestas, de forma ovalada y de color verde brillante. Son perennes y mantienen su follaje durante todo el año en climas suaves.</li>
+                        <li>Las flores son en forma de embudo, suelen ser de color azul, púrpura o blanco.</li>
+                        <li>Es una planta resistente que tolera diversas condiciones de suelo y clima.</li>
+                    </ul>
+                </div>
+                <img src="/Imagenes/vinca.jpg" alt="Vincas">
+                <div class="right-section">
+                    <h3>Cuidado y Mantenimiento</h3>
+                    <ul>
+                        <li>Prefiere lugares con sombra parcial a plena sombra. Puede tolerar el sol directo, pero en climas muy cálidos, es mejor proporcionar sombra para evitar que las hojas se quemen.</li>
+                        <li>Mantén el suelo ligeramente húmedo, evita el encharcamiento, ya que esto puede provocar pudrición de raíces.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplant-container">
+                    <a href="#third-section" class="buttonplant">Volver al catálogo</a>
+                </div>
+    </section>
+
+    <section class="aboutus" id="Sobre Nosotros">
+        <div class="intro-image">
+            <img src="/Imagenes/logo.png" alt="Jardines Margarita C.A. logo">
+        </div>
+        <div class="about-us">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una asociación fundada en el año 2001 por dos apasionados de la botánica y el paisajismo, nuestra empresa surge del deseo de promover la conexión con la naturaleza en la comunidad Neoespartana y turistas, embellecer espacios y fomentar la educación ambiental. Uniendo nuestros conocimientos y habilidades, compramos un terreno ideal y lo transformamos en un espacio mágico llamado "Jardines Margarita". Con trabajo arduo y una visión clara, establecimos invernaderos, áreas de cultivo y espacios para el disfrute de los visitantes, especializándonos sobre todo en nuestras reconocidas plantas ornamentales.<br><br>Jardines Margarita C.A. es más que un vivero; es la encarnación viva de nuestra pasión y dedicación por el ambiente.
+            </p>
+        </div>
+    </section>
+    <section class="contacto" id="contacto">
+        <div class="contacto-content">
+            <div class="input-box">
+                <h2>Contacto <img src="Imagenes/rosee.png" alt="Icono de ramo" class="icono-contacto"></h2>
+                <p>
+                    <i class='bx bxs-map-pin'></i> Isla de Margarita, vía los Robles la Asunción, sector Mundo Nuevo.<br>
+                    <i class='bx bxs-phone'></i> (+58) 0414-790-8440<br>
+                    <i class='bx bx-envelope'></i> jardinesmargarita@gmail.com<br>
+                    <i class='bx bxl-instagram'></i> @jardinesmargaritaca
+                </p>
+            </div>
+        </div>
+    </section>
+        </div>
+    </section>
+
+    <footer>
+        Jardines Margarita C.A - &copy; 2025
+    </footer>
+</body>
+</html>
